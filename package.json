@@ -1,0 +1,28 @@
+{
+  "name": "dashcast",
+  "version": "0.0.1",
+  "description": "Chromecast app for displaying dashboard pages",
+  "main": "cli/test.js",
+  "dependencies": {
+    "nodecastor": "^0.1.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node cli/test.js",
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madmod/dashcast.git"
+  },
+  "keywords": [
+    "chromecast",
+    "dashboard"
+  ],
+  "author": "madmod <madmodmail@gmail.com> (https://github.com/madmod)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madmod/dashcast/issues"
+  },
+  "homepage": "https://github.com/madmod/dashcast#readme"
+}
