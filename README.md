@@ -1,4 +1,4 @@
 dashcast
 ========
 
-Chromecast app for displaying dashboard pages
+Chromecast app for displaying dashboard pages.

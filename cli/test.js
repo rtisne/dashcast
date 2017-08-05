@@ -1,5 +1,5 @@
 var nodecastor = require('nodecastor'),
-  util = require("util");
+	util = require('util');
 nodecastor.scan()
   .on('online', function(d) {
     console.log("New device: ", d.id);
@@ -7,10 +7,10 @@ nodecastor.scan()
     d.status(function(err, s) {
       if (!err) {
         console.log('Chromecast status', util.inspect(s));
-        d.application('5C3F0A3C', function(err, a) {
+        d.application('84912283', function(err, a) {
           if (!err) {
             console.log('Application', util.inspect(a));
-            a.run('urn:x-cast:es.offd.dashcast', function(err, s) {
+            a.run('urn:x-cast:madmod.dashcast', function(err, s) {
               if (!err) {
                 s.send({url: "http://codepen.io/fleeting/full/xklfq/"});
               }

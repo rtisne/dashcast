@@ -40,7 +40,7 @@
       color: #555;
       font-weight: bold;
       height: 1.2em;
-      text-align: center; 
+      text-align: center;
       padding: 10px;
       background: rgba(32, 27,37,0.9);
       z-index: 10;
@@ -49,7 +49,7 @@
     #status.empty{
       opacity: 0;
     }
-    
+
     iframe{
       position: absolute;
       left:0; top:0; right:0; bottom:0;
@@ -67,7 +67,7 @@
     </style>
   </head>
   <body id="dcast">
-	 
+
   <div id="main" class="fade">
     <iframe id="if1"></iframe>
     <iframe id="if2"></iframe>
@@ -100,7 +100,7 @@
 
         if2.onload = if1.onload = function(e){
           var the_if = this;
-          if (the_if.src.indexOf("dashcast_is_error_page_zz") > 0) { 
+          if (the_if.src.indexOf("dashcast_is_error_page_zz") > 0) {
             the_if.src = the_if.getAttribute("target-src");
             return;
           }
@@ -143,9 +143,9 @@
           window.castReceiverManager.setApplicationState("Application ready");
           setStatus("Waiting for address")
         };
-        
+
         // create a CastMessageBus to handle messages for a custom namespace
-        window.messageBus = window.castReceiverManager.getCastMessageBus('urn:x-cast:es.offd.dashcast');
+        window.messageBus = window.castReceiverManager.getCastMessageBus('urn:x-cast:madmod.dashcast');
 
         // handler for the CastMessageBus message event
         window.messageBus.onMessage = function(event) {
@@ -162,7 +162,7 @@
         // initialize the CastReceiverManager with an application status message
         window.castReceiverManager.start({statusText: "Application is starting"});
       };
-    
+
     </script>
   </body>
 </html>
