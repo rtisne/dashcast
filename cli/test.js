@@ -10,7 +10,7 @@ nodecastor.scan()
         d.application('84912283', function(err, a) {
           if (err) return console.error(err);
           console.log('Application', util.inspect(a));
-          a.run('urn:x-cast:madmod.dashcast', function(err, s) {
+          a.run('urn:x-cast:com.madmod.dashcast', function(err, s) {
             if (err) return console.error(err);
             s.send({ url: "http://codepen.io/fleeting/full/xklfq/" });
           });
